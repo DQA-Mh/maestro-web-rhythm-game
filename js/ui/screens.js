@@ -1,0 +1,1 @@
+export function createScreenController(){const screens=[...document.querySelectorAll('.screen')];return{show(id){screens.forEach(screen=>screen.classList.toggle('is-active',screen.id===id))}}}

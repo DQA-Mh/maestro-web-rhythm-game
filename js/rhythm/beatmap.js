@@ -1,0 +1,1 @@
+export const DEMO_BEATMAP=Array.from({length:36},(_,index)=>({time:1.2+index*.62,direction:index%4}));export async function loadBeatmap(url='./assets/audio/moonlit-overture.json'){try{const response=await fetch(url);if(!response.ok)throw new Error(`Beatmap request failed: ${response.status}`);return await response.json()}catch{return DEMO_BEATMAP}}
