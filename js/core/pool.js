@@ -1,0 +1,1 @@
+export class ObjectPool{constructor(size,factory,reset=()=>{}){this.items=Array.from({length:size},factory);this.reset=reset}acquire(){return this.items.pop()??null}release(item){this.reset(item);this.items.push(item)}}

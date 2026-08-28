@@ -1,0 +1,1 @@
+export class ParallaxLookAround{constructor(maxOffset=90){this.pan=0;this.maxOffset=maxOffset}nudge(amount){this.pan=Math.max(-1,Math.min(1,this.pan+amount))}offset(factor){return this.pan*this.maxOffset*factor}}
